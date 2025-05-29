@@ -3,11 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kalkulator Konversi Suhu</title>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 
-
 <body>
-    
+    <!-- Header Content -->
+    <header>
+        <div class="mode-toggle">
+  <button id="darkModeToggle">🌙 Dark Mode</button>
+</div>
+
+       <h1>Konversi Suhu</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="container">
+            <p>Masukkan suhu dan klik tombol untuk melakukan konversi.</p>
+            <!-- Form Konversi Suhu -->
+             <div>
+                <!-- Inputan suhu -->
+                <label id="inputLabel" for="inputField">Celsius (°C):</label>
+                <textarea id="inputField" placeholder="Masukkan suhu..."></textarea>
+                <span id="errorMessage" class="error"></span>
+            </div>
+
+            <!-- Tombol Action -->
+            <div class="buttons">
+                <button id="convertBtn">Konversi</button>
+                <button id="resetBtn">Reset</button>
+                <button id="reverseBtn">Reverse</button>
+            </div>
+        </section>
+
+        <!-- Hasil Konversi -->
+        <section class="container">
+            <div>
+                <label id="outputLabel" for="outputField">Fahrenheit (°F):</label>
+                <textarea id="outputField" readonly></textarea>
+            </div>
+
+            <!-- Hasil Penjelasan Rumus Kalkulasi -->
+            <div>
+                <label for="calcField">Rumus Kalkulasi:</label>
+                <textarea id="calcField" readonly></textarea>
+            </div>
+
+            <!-- Hasil Penjelasan Kalkulasi Reverse -->
+            <div>
+                <label for="reverseCalcField">Rumus Kalkulasi Reverse:</label>
+                <textarea id="reverseCalcField" readonly></textarea>
+            </div>
+        </section>  
+    </main>
+
+
+    <!-- Footer Content -->
+    <footer >
+        <p>&copy; 2025 Hdwiariany</p>
+    </footer>
+
+  <!-- External JavaScript -->
+   <script src="js/script.js"></script>
 </body>
 </html>

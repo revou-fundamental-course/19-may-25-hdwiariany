@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #108573, #2980b9);
+  color: #fff;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  resize: vertical;
+}
+
+textarea[readonly] {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #196a44;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #eee;
+}
+
+.error {
+  color: #662323;
+  font-size: 14px;
+}
+
+
+/* Gaya error message modern */
+.error {
+  display: none;
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #f8bcbc;
+  padding: 10px;
+  border-left: 5px solid #ff4444;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.error.active {
+  display: block;
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20%, 60% {
+    transform: translateX(-5px);
+  }
+  40%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+
+/* Responsif */
+@media (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+  }
+}
+
+/* Dark Mode */
+.mode-toggle {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+#darkModeToggle {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #2c3645;
+  color: #628fad;
+  transition: all 0.3s ease;
+}
+
+#darkModeToggle:hover {
+  background-color: #1d1d27;
+}
+
+body.dark {
+  background: linear-gradient(to right, #2c3e50, #000000);
+  color: #f1f1f1;
+}
+
+body.dark .container {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+body.dark textarea {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark textarea[readonly] {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark button {
+  background-color: #fff;
+  color: #c4d3de;
+}
+
+body.dark #darkModeToggle {
+  background-color: #d6fbe8;
+  color: #3a7977;
+}
+
+/* Gaya dan warna Button */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 5px;
+}
+
+/* Konversi - Biru */
+#convertBtn {
+  background-color: #8be1af;
+  color: rgb(86, 101, 81);
+}
+#convertBtn:hover {
+  background-color: #91c49a;
+}
+
+/* Reset - Abu-abu */
+#resetBtn {
+  background-color: #edadad;
+  color: #7d1f1f;
+}
+#resetBtn:hover {
+  background-color: #d49497;
+}
+
+/* Reverse - Oranye */
+#reverseBtn {
+  background-color: #a9d0ed;
+  color: rgb(60, 108, 111);
+}
+#reverseBtn:hover {
+  background-color: #8fbbdb;
+}
+
+/* Dark Mode adjustment */
+body.dark #convertBtn {
+  background-color: #377652;
+  color: #fff;
+}
+body.dark #resetBtn {
+  background-color: #712f2f;
+  color: #fff;
+}
+body.dark #reverseBtn {
+  background-color: #335b97;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 12px;
+  color: #eff9f6;
+  margin-top: 10px;
+}
+
+/* Dark mode footer */
+body.dark footer {
+  color: #ccc;
+}
+
